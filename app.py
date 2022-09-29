@@ -13,6 +13,7 @@ def map_det():
     format=request.json["output_format"]
     add1=address1.replace(' ', '+')
     add1=add1.replace('#', '')
+    print("input apikey")
     apikey=input()
     url=('https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}'.format(add1,apikey))
     response=requests.get(url).json()
